@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f4a261;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #f18631;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+header .logo {
+  color: #f4a261;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  margin-left: 30px;
+}
+header nav ul li a {
+  color: #264653;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #f4a261;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/cookie-bg.jpg") no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
+.hero .container {
+  max-width: 800px;
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.about-section {
+  padding: 80px 0;
+  background: #fff;
+}
+.about-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #264653;
+  font-size: 2.5rem;
+}
+.about-section .about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.about-section .about-content .about-text {
+  flex: 1;
+}
+.about-section .about-content .about-text p {
+  margin-bottom: 20px;
+}
+.about-section .about-content .about-image {
+  flex: 1;
+}
+.about-section .about-content .about-image .image-placeholder {
+  height: 400px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  background: url("../images/about-cookies.jpg") no-repeat center center/cover;
+}
+
+.products-section {
+  padding: 80px 0;
+  background: #f3dead;
+}
+.products-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #264653;
+  font-size: 2.5rem;
+}
+.products-section .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.products-section .product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.products-section .product-card:hover {
+  transform: translateY(-10px);
+}
+.products-section .product-card .product-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.products-section .product-card .product-image.cookie1 {
+  background: url("../images/chocolate-chip.jpg") no-repeat center center/cover;
+}
+.products-section .product-card .product-image.cookie2 {
+  background: url("../images/double-chocolate.jpg") no-repeat center center/cover;
+}
+.products-section .product-card .product-image.cookie3 {
+  background: url("../images/oatmeal-raisin.jpg") no-repeat center center/cover;
+}
+.products-section .product-card h3 {
+  padding: 20px 20px 10px;
+  color: #97ffd4;
+  background-color: #fc4902;
+  font-weight: bold;
+  filter: brightness(1);
+}
+.products-section .product-card p {
+  padding: 0 20px 20px;
+  color: #fdfffe;
+  background-color: #9c1a4c;
+  font-weight: bold;
+  filter: brightness(0.9);
+}
+
+footer {
+  background: #264653;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .social-links {
+  margin-top: 20px;
+}
+footer .social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+footer .social-links a:hover {
+  color: #f4a261;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .about-content .about-image {
+    margin-top: 30px;
+  }
+  header .container {
+    flex-direction: column;
+  }
+  header .container nav ul {
+    margin-top: 20px;
+  }
+  header .container nav ul li {
+    margin: 0 15px;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

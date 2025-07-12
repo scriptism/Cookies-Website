@@ -1,0 +1,276 @@
+// Variables
+$primary-color: #f4a261;
+$secondary-color: #2a9d8f;
+$dark-color: #264653;
+$light-color: #e9c46a;
+$white: #fff;
+$black: #333;
+$parag: #97ffd4;
+
+// Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: $black;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: $primary-color;
+  color: $white;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
+
+// Header
+header {
+  background: $white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .logo {
+    color: $primary-color;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-left: 30px;
+
+      a {
+        color: $dark-color;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/cookie-bg.jpg") no-repeat center center/cover;
+  color: $white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px; // To account for fixed header
+
+  .container {
+    max-width: 800px;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+}
+
+// About Section
+.about-section {
+  padding: 80px 0;
+  background: $white;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: $dark-color;
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .about-text {
+      flex: 1;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .about-image {
+      flex: 1;
+
+      .image-placeholder {
+        height: 400px;
+        background: #f5f5f5;
+        border-radius: 10px;
+        // Replace with actual image in production
+        background: url("../images/about-cookies.jpg") no-repeat center
+          center/cover;
+      }
+    }
+  }
+}
+
+// Products Section
+.products-section {
+  padding: 80px 0;
+  background: lighten($light-color, 15%);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: $dark-color;
+    font-size: 2.5rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .product-card {
+    background: $white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+
+      &.cookie1 {
+        background: url("../images/chocolate-chip.jpg") no-repeat center
+          center/cover;
+      }
+      &.cookie2 {
+        background: url("../images/double-chocolate.jpg") no-repeat center
+          center/cover;
+      }
+      &.cookie3 {
+        background: url("../images/oatmeal-raisin.jpg") no-repeat center
+          center/cover;
+      }
+    }
+
+    h3 {
+      padding: 20px 20px 10px;
+      color: $parag;
+      background-color: #fc4902;
+      font-weight: bold;
+      filter: brightness(1);
+    }
+
+    p {
+      padding: 0 20px 20px;
+      color: lighten($parag, 20%);
+      background-color: #9c1a4c;
+      font-weight: bold;
+      filter: brightness(0.9);
+    }
+  }
+}
+
+// Footer
+footer {
+  background: $dark-color;
+  color: $white;
+  padding: 30px 0;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-links {
+    margin-top: 20px;
+
+    a {
+      display: inline-block;
+      margin: 0 10px;
+      color: $white;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+
+    .about-image {
+      margin-top: 30px;
+    }
+  }
+
+  header .container {
+    flex-direction: column;
+
+    nav ul {
+      margin-top: 20px;
+
+      li {
+        margin: 0 15px;
+      }
+    }
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+}
