@@ -1,2 +1,2 @@
 # Cookies-Website
-I styled it using scss
+My first steps with scss
